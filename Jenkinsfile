@@ -22,7 +22,7 @@ stage("Build")
 {
  sh "${mavenHome}/bin/mvn clean package"
 }
-
+/*
 stage("ExecuteSonarQubeReport")
 {
 sh "${mavenHome}/bin/mvn sonar:sonar" 
@@ -32,7 +32,6 @@ stage("UploadArtifactsontoNexus")
 {
 sh "${mavenHome}/bin/mvn deploy"
 }
-
 stage("DeployontoTomcat")
 {
 sshagent(['65276554-0d7a-4fa6-aafd-7bebc0183c88']) {
@@ -50,5 +49,5 @@ Rajeev
 DevopsEngineer''', cc: 'lraj18@gmail.com', from: '', replyTo: '', subject: 'Build Over', to: 'lraj08@gmail.com'
     
 }
-
+*/
 }
